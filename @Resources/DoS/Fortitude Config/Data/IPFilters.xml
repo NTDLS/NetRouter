@@ -1,0 +1,1 @@
+<IPFilters><Enable>No</Enable><Filter><Address>192.168.0.100</Address><Description>Example IP Filter</Description><Enable>No</Enable></Filter><Filter><Address>127.0.0.1</Address><Description>Example IP Filter</Description><Enable>No</Enable></Filter></IPFilters>

@@ -1,0 +1,69 @@
+1.0.0.0
+Released 32 & 64 bit.
+Initial public release into beta.
+     
+1.0.0.2
+Implemented the ability to save configured routings.
+Implemented ability to restart the router internally without stopping the service. This allows the management console to stay connected while the internal state of the service is reset to that of a freshly started router. 
+Tightened integration with error tracing classes.
+
+1.0.0.3
+Completed administration access. This includes local and remote administration. 
+All operations are now tied to the configuration.
+ 
+1.0.0.4
+Resolved inability to login to router after install. This change requires an uninstall then reinstall of the application. 
+
+1.0.0.5
+Further threading optimizations for speed improvements and better handing of disconnections.
+Added route monitor support with graphing.
+Added delete route functionality.
+Implemented additional management safety controls.
+
+1.0.0.6
+Resolved inability to bind to a specific IP address upon initial route setup.
+Fixed issue which would cause the application to lock if route was deleted while being monitored.
+Added additional thread to route monitor for smoother operation.
+Fixed issue where route monitors remain open after losing connection to the service.
+Re-sized router-monitor labels so that longer name could be displayed.
+
+1.0.0.7
+Implemented network-load-balancing and failover:  Round-Robin, Least-Connections and Failover-Only.
+Resolved potential crash when under high-load due to insufficient event name randomness.
+Resolved potentially long shutdown times. This was due to an necessary lock which would need to time-out.
+Implemented the ability to edit bindings (double click) without removing then re-adding them. 
+
+1.0.0.8
+Resolved hangs and crashes when closing the route monitor dialogs.
+Implemented the ability to add/remove and manipulate HTTP headers.
+Moved all route configuration to a tab-driven dialog.
+
+1.0.0.9
+Implemented scriptable HTTP header manipulation (to be expanded).
+Fixed quirk that caused odd item selections when editing grid items.
+
+1.0.1.0
+Resolved potential crash when adding new route under high load.
+Resolved temporary lock on all routes when connection lock cannot be quickly acquired.
+Added the ability to limit the dynamic buffer to reduce memory load and mitigate DOS attacks.
+Resolved issues tabbing between child controls within the route configuration dialogs.
+Retooled threading model which reduced resource requirements by several orders of magnitude.
+Resolved issue which would cause a disabled HTTP header rule to still be applied.
+Resolved issue which would cause negative deltas to "over scale" the route monitor graph.
+Implemented resolver thread-pool to off-load outgoing connections and host IP resolutions.
+Implemented overlapped non-blocking connection acceptance.
+Added auto focusing to tab control for child control validation errors.
+Resolved issue which caused tab pages to be closed while leaving the configuration dialog open.
+Over allocated routes so that configuration changes do not require memory relocation and dropped connections.
+Resolved further GUI hangs and crashes when closing the route monitor dialogs (service was unaffected).
+
+1.0.1.1
+Implemented high-precision timer and corrected delta transfer formula.
+Implemented connection delta tracking on route monitor.
+Resolved GUI hanging issue when attemping to monitor the same route multiple times.
+Server now persists the route statistics until service restart regardless of re-configuration.
+
+1.0.1.2
+Adjusted bandwidth/CPU tuner to allow for much higher throughput.
+Compiled with Visual C++ 2015.
+Resolved issue with closing route monitor taking a long time and using notable degrees of CPU.

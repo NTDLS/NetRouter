@@ -1,0 +1,57 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//  Copyright © NetworkDLS 2002, All rights reserved
+//
+// THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF 
+// ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO 
+// THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A 
+// PARTICULAR PURPOSE.
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#ifndef _ConnectHosts_Types_H
+#define _ConnectHosts_Types_H
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#ifdef ROUTER_SERVICE
+#include "CPersistenceMap.H"
+#endif
+
+#define CONNECTHOSTS_LIST_POS_ADDRESS	0
+#define CONNECTHOSTS_LIST_POS_PORT		1
+#define CONNECTHOSTS_LIST_POS_DESCR		2
+
+#define CONNECTHOSTS_MAX_HOST_LENGTH	1024
+#define CONNECTHOSTS_MAX_DESCR_LENGTH	1024
+#define CONNECTHOSTS_MAX_LBM_LENGTH		1024 //MAX LBM (Load Balance Method).
+
+#define LBM_FAILOVERONLY				0
+#define LBM_ROUNDROBIN					1
+#define LBM_LEASTCONNECTIONS			2
+
+extern const char *gsLBM[];
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+typedef struct _tag_Connect_Host_LBI {
+	int LastConnectIndex;
+} LOADBALANCEINFO, *LPLOADBALANCEINFO;
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+typedef struct _tag_Connect_Host {
+	char *Address;
+	int Port;
+#ifdef ROUTER_SERVICE
+	char *ResolvedIP; //DO NOT SAVE. This is for internal state only.
+#endif
+	char *Description;
+	bool Enabled;
+} CONNECTHOST, *LPCONNECTHOST;
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+typedef struct _tag_Connect_Hosts {
+	int Count;
+	CONNECTHOST *Items;
+} CONNECTHOSTS, *LPCONNECTHOSTS;
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#endif

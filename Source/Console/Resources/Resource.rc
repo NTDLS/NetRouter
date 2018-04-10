@@ -1,0 +1,561 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_HANDCURSOR          CURSOR                  "handcurs.cur"
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_MAIN                ICON                    "MainIcon.ico"
+IDI_STOPPED             ICON                    "Stopped.ico"
+IDI_RUNNING             ICON                    "Running.ico"
+IDI_PASSWORD            ICON                    "Password.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAIN DIALOGEX 0, 0, 381, 214
+STYLE DS_SETFONT | DS_SETFOREGROUND | DS_3DLOOK | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+MENU IDR_MAINMENU
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_DETAIL,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_ALIGNLEFT | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,7,7,367,200,WS_EX_STATICEDGE
+END
+
+IDD_NETLOGO DIALOGEX 0, 0, 273, 87
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "IDD_NETLOGO"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    ICON            "",IDC_ABOUTICON,9,7,20,20
+    LTEXT           "IDC_APPNAME",IDC_APPNAME,84,7,159,8
+    LTEXT           "IDC_APPVERSION",IDC_APPVERSION,84,17,159,8
+    LTEXT           "IDC_APPCOPYRIGHT",IDC_APPCOPYRIGHT,44,53,192,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,40,63,234,1
+    DEFPUSHBUTTON   "OK",IDC_OKBUTTON,220,69,50,14
+    LTEXT           "IDC_BUILDTIMEDATE",IDC_BUILDTIMEDATE,84,27,159,8
+    LTEXT           "www.NetworkDLS.com",IDC_NETLINK,84,37,159,8
+    LTEXT           "Web site:",IDC_STATIC,44,37,31,8
+    LTEXT           "Application:",IDC_STATIC,44,7,38,8
+    LTEXT           "Version:",IDC_STATIC,44,17,26,8
+    LTEXT           "Build:",IDC_STATIC,44,27,18,8
+END
+
+IDD_CONNECT DIALOGEX 0, 0, 174, 119
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_HOST,42,27,118,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PASSWORD,42,56,118,14,ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "Ok",IDC_OK,59,97,50,14
+    PUSHBUTTON      "Cancel",IDC_CANCEL,117,97,50,14
+    LTEXT           "Server address",IDC_STATIC,42,17,48,8
+    GROUPBOX        "Connect to Server",IDC_STATIC,33,7,134,86
+    LTEXT           "Password",IDC_STATIC,42,46,32,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,34,74,133,1
+    LTEXT           "--- Service Status ---",IDC_SERVICESTATUS,42,80,102,8
+    ICON            IDI_PASSWORD,IDC_STATIC,7,20,21,20
+END
+
+IDD_ROUTE DIALOGEX 0, 0, 340, 210
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Cancel",IDC_CANCEL,283,189,50,14
+    DEFPUSHBUTTON   "OK",IDC_OK,221,189,50,14
+    CONTROL         "",IDC_TABCONTROL,"SysTabControl32",TCS_MULTILINE,7,7,326,176
+END
+
+IDD_ROUTE_IPBINDING DIALOGEX 0, 0, 251, 153
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Configure"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Configuration",IDC_CONFIGTITLE,7,7,237,117
+    LTEXT           "IP Address",IDC_STATIC,15,19,36,8
+    COMBOBOX        IDC_IPADDRESS,15,29,222,72,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Description",IDC_STATIC,15,48,36,8
+    EDITTEXT        IDC_IPDESCR,15,58,221,58,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL
+    CONTROL         "Enabled?",IDC_ENABLED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,133,45,10
+    DEFPUSHBUTTON   "OK",IDC_OK,137,131,50,14
+    PUSHBUTTON      "Cancel",IDC_CANCEL,194,131,50,14
+END
+
+IDD_SETPASSWORD DIALOGEX 0, 0, 238, 114
+STYLE DS_SETFONT | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Set and Confirm the Client Password",IDC_STATIC,8,8,221,63
+    ICON            IDI_PASSWORD,IDC_STATIC,17,20,21,20
+    EDITTEXT        IDC_PASSWORD1,50,23,168,14,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_PASSWORD2,50,40,168,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "Password Strength:",IDC_STATIC,50,57,63,8
+    LTEXT           "Unacceptable",IDC_PWDWEIGHT,117,57,99,8
+    CONTROL         "Allow Remote Administration?",IDC_REMOTEADMIN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,76,109,10
+    DEFPUSHBUTTON   "Ok",IDC_OK,179,92,50,14
+    PUSHBUTTON      "Cancel",IDC_CANCEL,122,92,50,14
+END
+
+IDD_MONITORROUTE DIALOGEX 0, 0, 374, 173
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_GRAPH,"Static",SS_BLACKRECT | SS_SUNKEN,7,63,360,102
+    LTEXT           "Route Name",IDC_STATIC,14,17,40,8
+    LTEXT           "Source Port",IDC_STATIC,14,27,38,8
+    LTEXT           "Max Peers",IDC_STATIC,14,37,34,8
+    LTEXT           "Failover/LBM",IDC_STATIC,14,47,42,8
+    LTEXT           "Current Connections",IDC_STATIC,215,17,67,8
+    LTEXT           "Total Connections",IDC_STATIC,215,27,58,8
+    LTEXT           "Total Transferred",IDC_STATIC,215,37,57,8
+    LTEXT           "Transfer Rate",IDC_STATIC,215,47,46,8
+    GROUPBOX        "Basic Information",IDC_STATIC,7,7,197,54
+    GROUPBOX        "Statistics",IDC_STATIC,207,7,160,54
+    LTEXT           "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",IDC_ROUTENAME,61,17,139,8,SS_ENDELLIPSIS
+    LTEXT           "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",IDC_SOURCEPORT,61,27,139,8,SS_ENDELLIPSIS
+    LTEXT           "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",IDC_MAXCONNECTIONS,61,37,139,8,SS_ENDELLIPSIS
+    LTEXT           "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",IDC_LOADBALANCEMETHOD,61,47,139,8,SS_ENDELLIPSIS
+    LTEXT           "xxxxxxxxxxxxxxxxxx",IDC_CURRENTCONNECTIONS,287,17,74,8,SS_ENDELLIPSIS
+    LTEXT           "xxxxxxxxxxxxxxxxxx",IDC_TOTALCONNECTIONS,287,27,74,8,SS_ENDELLIPSIS
+    LTEXT           "xxxxxxxxxxxxxxxxxx",IDC_TOTALTRANSFERRED,287,37,74,8,SS_ENDELLIPSIS
+    LTEXT           "xxxxxxxxxxxxxxxxxx",IDC_TRANSFERRATE,287,47,74,8,SS_ENDELLIPSIS
+END
+
+IDD_ROUTE_ROUTING DIALOGEX 0, 0, 251, 153
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Configure"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Configuration",IDC_CONFIGTITLE,7,7,237,117
+    LTEXT           "Host / IP Address",IDC_STATIC,15,19,57,8
+    EDITTEXT        IDC_HOST,15,29,170,14,ES_AUTOHSCROLL
+    LTEXT           "Remote Port",IDC_STATIC,189,19,41,8
+    EDITTEXT        IDC_PORT,189,29,47,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Description",IDC_STATIC,15,48,36,8
+    EDITTEXT        IDC_IPDESCR,15,58,221,58,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL
+    CONTROL         "Enabled?",IDC_ENABLED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,133,45,10
+    DEFPUSHBUTTON   "OK",IDC_OK,137,131,50,14
+    PUSHBUTTON      "Cancel",IDC_CANCEL,194,131,50,14
+END
+
+IDD_ROUTE_ADVANCED DIALOGEX 0, 0, 218, 104
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Advanced",IDC_STATIC,7,7,198,81
+    LTEXT           "Initial Buffer Size",IDC_STATIC,13,20,55,8
+    EDITTEXT        IDC_INITIALBUFFERSIZE,13,31,87,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Idle Disconnect Timeout",IDC_STATIC,13,52,77,8
+    EDITTEXT        IDC_IDLETIMEOUT,13,63,87,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Max Buffer Size",IDC_STATIC,109,20,51,8
+    EDITTEXT        IDC_MAXBUFFERSIZE,109,31,87,14,ES_AUTOHSCROLL | ES_NUMBER
+END
+
+IDD_ROUTE_ROUTINGS DIALOGEX 0, 0, 314, 158
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Local Port",IDC_STATIC,12,17,32,8
+    EDITTEXT        IDC_LOCALPORT,12,28,92,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Max Connections",IDC_STATIC,122,17,56,8
+    EDITTEXT        IDC_MAXCONNECTIONS,122,28,92,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Destination IPs/Hosts",IDC_STATIC,12,49,70,8
+    CONTROL         "",IDC_HOST_LIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,12,59,254,86
+    PUSHBUTTON      "Add",IDC_HOST_ADD,272,60,31,13
+    PUSHBUTTON      "Delete",IDC_HOST_DELETE,272,76,31,13
+    PUSHBUTTON      "Up",IDC_HOST_UP,272,94,31,13
+    PUSHBUTTON      "Down",IDC_HOST_DOWN,272,110,31,13
+    GROUPBOX        "Routings",IDC_STATIC,7,7,300,144
+END
+
+IDD_ROUTE_IPBINDINGS DIALOGEX 0, 0, 315, 143
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Local IP Binding",IDC_STATIC,7,7,301,129
+    CONTROL         "",IDC_IPADDRESSLIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,12,18,255,99
+    CONTROL         "Listen on all IPs?",IDC_IP_LISTENONALL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,121,69,10
+    PUSHBUTTON      "Add",IDC_IP_ADD,272,18,31,13
+    PUSHBUTTON      "Delete",IDC_IP_DELETE,272,34,31,13
+    PUSHBUTTON      "Up",IDC_IP_UP,272,52,31,13
+    PUSHBUTTON      "Down",IDC_IP_DOWN,272,68,31,13
+END
+
+IDD_ROUTE_HEADERS DIALOGEX 0, 0, 315, 142
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_HEADER_LIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,12,18,255,110
+    PUSHBUTTON      "Add",IDC_HEADER_ADD,272,18,31,13
+    PUSHBUTTON      "Delete",IDC_HEADER_DELETE,272,34,31,13
+    PUSHBUTTON      "Up",IDC_HEADER_UP,272,52,31,13
+    PUSHBUTTON      "Down",IDC_HEADER_DOWN,272,68,31,13
+    GROUPBOX        "HTTP Headers",-1,7,7,301,128
+END
+
+IDD_ROUTE_BASIC DIALOGEX 0, 0, 315, 142
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Basic information",IDC_STATIC,7,7,301,128
+    LTEXT           "Name",IDC_STATIC,12,17,19,8
+    EDITTEXT        IDC_NAME,12,27,291,14,ES_AUTOHSCROLL
+    LTEXT           "Description",IDC_STATIC,12,45,36,8
+    EDITTEXT        IDC_DESCR,12,56,291,58,ES_MULTILINE | ES_WANTRETURN | WS_VSCROLL
+    CONTROL         "Auto-start?",IDC_AUTOSTART,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,119,53,10
+END
+
+IDD_ROUTE_HEADER DIALOGEX 0, 0, 247, 254
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Configure"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Configuration",IDC_CONFIGTITLE,7,7,233,215
+    LTEXT           "Header Name",IDC_STATIC,12,17,44,8
+    COMBOBOX        IDC_HEADER_NAME,12,28,220,72,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Verbs (Comma Seperated)",IDC_STATIC,12,45,85,8
+    COMBOBOX        IDC_HEADER_VERBS,12,56,220,72,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Manipulation Method",IDC_STATIC,12,73,67,8
+    COMBOBOX        IDC_HEADER_METHOD,12,84,220,72,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Header Text",IDC_STATIC,12,101,41,8
+    COMBOBOX        IDC_HEADER_TEXT,12,112,220,72,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Description",IDC_STATIC,12,131,36,8
+    EDITTEXT        IDC_HEADER_DESCR,12,142,220,58,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL
+    CONTROL         "Enabled?",IDC_ENABLED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,204,45,10
+    DEFPUSHBUTTON   "OK",IDC_OK,130,232,50,14
+    PUSHBUTTON      "Cancel",IDC_CANCEL,190,232,50,14
+END
+
+IDD_ROUTE_LOADBALANCE DIALOGEX 0, 0, 214, 104
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Load Balancing and Fail-Over",IDC_STATIC,7,7,193,85
+    LTEXT           "Load Balance Method",IDC_STATIC,14,23,69,8
+    COMBOBOX        IDC_HOST_BALANCE,14,34,180,64,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Persistence Time (Seconds)",IDC_STATIC,14,50,88,8
+    EDITTEXT        IDC_PERSISTENCETIME,14,60,93,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Persist by Source IP?",IDC_LBMPERSISTBYIP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,111,63,83,10
+END
+
+IDD_ROUTE_THREADING DIALOGEX 0, 0, 212, 113
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Threading",-1,7,7,191,91
+    LTEXT           "Data-Pump Threads",-1,13,20,64,8
+    EDITTEXT        IDC_DATAPUMPTHREADS,13,31,87,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Spawn Threshold %",-1,106,20,65,8
+    EDITTEXT        IDC_DataPumpSpawnThreshold,106,31,87,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",-1,"Static",SS_ETCHEDHORZ,13,56,180,1
+    LTEXT           "Connection Threads",-1,13,64,65,8
+    EDITTEXT        IDC_RESOLVERTHREADS,13,75,87,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Spawn Threshold %",-1,106,64,65,8
+    EDITTEXT        IDC_DataPumpSpawnThreshold2,106,75,87,14,ES_AUTOHSCROLL | ES_NUMBER
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 374
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 207
+    END
+
+    IDD_NETLOGO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        VERTGUIDE, 248
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 65
+    END
+
+    IDD_CONNECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 167
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 112
+    END
+
+    IDD_ROUTE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 333
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 203
+    END
+
+    IDD_ROUTE_IPBINDING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 244
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 145
+    END
+
+    IDD_SETPASSWORD, DIALOG
+    BEGIN
+        LEFTMARGIN, 8
+        RIGHTMARGIN, 229
+        TOPMARGIN, 8
+        BOTTOMMARGIN, 106
+    END
+
+    IDD_MONITORROUTE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 367
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 166
+    END
+
+    IDD_ROUTE_ROUTING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 244
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 145
+    END
+
+    IDD_ROUTE_ADVANCED, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 211
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 97
+    END
+
+    IDD_ROUTE_ROUTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 307
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 151
+    END
+
+    IDD_ROUTE_IPBINDINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 308
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 136
+    END
+
+    IDD_ROUTE_HEADERS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 308
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 135
+    END
+
+    IDD_ROUTE_BASIC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 308
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 135
+    END
+
+    IDD_ROUTE_HEADER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 240
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 246
+    END
+
+    IDD_ROUTE_LOADBALANCE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 207
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 97
+    END
+
+    IDD_ROUTE_THREADING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 205
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 106
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,1,2
+ PRODUCTVERSION 1,0,1,2
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40000L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "NetRouter Console"
+            VALUE "CompanyName", "NetworkDLS"
+            VALUE "FileDescription", "NetworkDLS NetRouter Console"
+            VALUE "FileVersion", "1.0.1.2"
+            VALUE "InternalName", "NetRouter Console"
+            VALUE "LegalCopyright", "Copyright © 2015 NetworkDLS. All rights reserved."
+            VALUE "OriginalFilename", "NetRouterMgt.exe"
+            VALUE "ProductName", "NetRouter Console"
+            VALUE "ProductVersion", "1.0.1.2"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINMENU MENU
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM "Connect to...",               ID_FILE_CONNECTTO
+        MENUITEM SEPARATOR
+        MENUITEM "Exit",                        ID_FILE_EXIT
+    END
+    POPUP "Server"
+    BEGIN
+        MENUITEM "Set Password",                ID_SERVER_SETPASSWORD
+        MENUITEM "Add new Route",               ID_SERVER_ADDNEWROUTE
+        MENUITEM "Restart Server",              ID_SERVER_RESTARTSERVER
+        MENUITEM SEPARATOR
+        MENUITEM "Service Console",             ID_SERVER_SERVICECONSOLE
+    END
+    POPUP "Help"
+    BEGIN
+        MENUITEM "About",                       ID_HELP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_TITLECAPTION        "NetRouter Console"
+    IDS_FILEVERSION         "1.0.1.2"
+    IDS_APPCOPYRIGHT        "Copyright © 2015 NetworkDLS. All rights reserved."
+    IDS_REGISTRYKEY         "SOFTWARE\\NetworkDLS\\NetRouter"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
